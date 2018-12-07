@@ -8,3 +8,16 @@ Rails + React.js プロジェクトを立ち上げる際の調査
 - Rails 5.2.2  
 
 # 環境構築  
+
+# 開発環境起動  
+
+Rails server と webpack-dev-server の起動が必要  
+```bash
+$ bundle exec rails s
+$ ./bin/webpack-dev-server
+```
+
+foreman 導入済みなので、下記のほうが楽  
+```bash
+$ bundle exec foreman start
+```
