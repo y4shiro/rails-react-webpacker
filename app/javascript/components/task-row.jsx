@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 
 class TaskRow extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class TaskRow extends React.Component {
         <td>{this.props.title}</td>
         <td>{this.props.description}</td>
         <td>
-          <a href="#" onClick={() => this.deleteTask(this.props.id)}>Delete</a>
+          <Button color="danger" onClick={() => this.deleteTask(this.props.id)}>Delete</Button>
         </td>
       </tr>
     )

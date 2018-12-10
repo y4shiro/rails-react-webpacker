@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container } from 'reactstrap';
+
 import Header from './header';
 import TaskForm from './task-form';
 import TaskTable from './task-table';
@@ -48,7 +50,7 @@ class App extends React.Component {
     return (
       <div>
         <Header title='Rails 5.1 + webpacker + React + Reactstrap Example' />
-        <div>
+        <Container className="mt-sm-4">
           {/*
             * TaskForm コンポーネント起因でタスクを作成した際に
             * タスク一覧を再取得するために
@@ -62,7 +64,7 @@ class App extends React.Component {
             * tasks はタスク一覧
             */}
           <TaskTable tasks={tasks} getTasks={this.getTasks} />
-        </div>
+        </Container>
       </div>
     )
   }

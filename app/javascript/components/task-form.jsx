@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Button
+} from 'reactstrap';
 
 class TaskForm extends React.Component {
   constructor(props) {
@@ -50,29 +57,33 @@ class TaskForm extends React.Component {
     let { title, description } = this.state;
 
     return (
-      <form onSubmit={this.createTask}>
-        <label>Title</label>
-        <input
-          type="text" value={title}
-          placeholder="Title"
-          onChange={(e) => {
-            this.setState({
-              title: e.target.value
-            })
-          }}
-        />
-        <label className="mr-sm-2">Description</label>
-        <input
-          type="text" value={description}
-          placeholder="Description"
-          onChange={(e) => {
-            this.setState({
-              description: e.target.value
-            })
-          }}
-        />
-        <input type="submit" value="Create Task" />
-      </form>
+      <Form inline onSubmit={this.createTask}>
+        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+          <Label className="mr-sm-2">Title</Label>
+          <Input
+            type="text" value={title}
+            placeholder="Title"
+            onChange={(e) => {
+              this.setState({
+                title: e.target.value
+              })
+            }}
+          />
+        </FormGroup>
+        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+          <Label className="mr-sm-2">Description</Label>
+          <Input
+            type="text" value={description}
+            placeholder="Description"
+            onChange={(e) => {
+              this.setState({
+                description: e.target.value
+              })
+            }}
+          />
+        </FormGroup>
+        <Button>Create Task</Button>
+      </Form>
     )
   }
 }

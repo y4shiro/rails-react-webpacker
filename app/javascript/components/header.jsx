@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  Navbar,
+  NavbarBrand
+} from 'reactstrap';
 
 class Header extends React.Component {
   constructor(props) {
@@ -8,9 +12,9 @@ class Header extends React.Component {
   render() {
     // <Header title=' ... で渡された値を表示
     return (
-      <div>
-        <h1>{this.props.title}</h1>
-      </div>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">{this.props.title}</NavbarBrand>
+      </Navbar>
     )
   }
 }

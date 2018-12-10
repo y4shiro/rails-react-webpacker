@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  Table
+} from 'reactstrap';
+
 import TaskRow from './task-row';
 
 class TaskTable extends React.Component {
@@ -11,7 +15,7 @@ class TaskTable extends React.Component {
 
     // 渡された tasks を map で回し、TaskRow コンポーネントとしてまとめてレンダリング
     return (
-      <table>
+      <Table className="mt-sm-r">
         <thead>
           <tr>
             <th>Title</th>
@@ -31,7 +35,7 @@ class TaskTable extends React.Component {
               />);
           }.bind(this))}
         </tbody>
-      </table>
+      </Table>
     );
   }
 }
